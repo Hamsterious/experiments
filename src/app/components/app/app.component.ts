@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { onceExperiment } from 'src/app/experiments/once';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,5 @@ import { onceExperiment } from 'src/app/experiments/once';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  ngOnInit() {
-    onceExperiment();
-  }
+  ngOnInit() { }
 }
