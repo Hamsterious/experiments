@@ -9,7 +9,7 @@ describe('OnceExperiment', () => {
         spyOn(squeakClass, 'squeak');
     });
 
-    it('When squeakFn is called normally, it always triggers.', () => {
+    it('Functions trigger n times they are called', () => {
         // Act
         squeakClass.squeak();
         squeakClass.squeak();
@@ -19,7 +19,7 @@ describe('OnceExperiment', () => {
         expect(squeakClass.squeak).toHaveBeenCalledTimes(3);
     });
 
-    it('When squeakFn is called via squeakOnceFn, squeakFn only triggers once', () => {
+    it('Functions called via onceFn triggers only once', () => {
         // Arrange
         const squeakOnce = once(squeakClass.squeak);
 
